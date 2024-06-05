@@ -1,0 +1,140 @@
+body {
+  background-color: hsla(40, 7%, 45%, 0.808);
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100svh;
+}
+
+.container {
+  position: relative;
+  padding: 10px;
+}
+
+.container .song-info {
+  background-color: hsla(15, 75%, 14%, 0.815);
+  margin: 0 15px;
+  padding: 25px 15px 5px 200px;
+  border-radius: 15px 15px 0 0;
+  border: 2px solid hsla(45, 44%, 14%, 0.292);
+}
+
+.container .song-info .song-name {
+  color: hsla(64, 93%, 77%, 0.838);
+  font-size: 18px;
+  margin: 3px 0 20px;
+  font-style: italic;
+}
+
+.container .song-info .artist-name {
+  color: hsla(46, 71%, 50%, 0.871);
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.container .song-info .progress-bar {
+  background-color: hsla(56, 83%, 75%, 0.888);
+  border: 20px;
+  cursor: pointer;
+}
+
+.container .song-info .progress-bar .fill-bar {
+  width: 0;
+  height: 6px;
+  border-radius: 20px;
+  background-color: hsla(46, 71%, 50%, 0.871);
+}
+
+.container .song-info .time {
+  font-size: 18px;
+  color: hsla(56, 83%, 75%, 0.888);
+  margin: 10px 0;
+  
+}
+
+.container .disk {
+  max-width: 150px;
+}
+
+.container .disk .active {
+  animation: rotate 3s linear 0s infinite forwards;
+}
+
+.container .disk .cover {
+  width: 175px;
+  height: 175px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: url("assets/lagos\ vibes.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  border: 3px solid hsla(45, 45%, 14%, 0.815);
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+ 
+}
+
+.container .disk .circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 17%;
+  top: 30%;
+  background-color: hsla(45, 50%, 63%, 0.925);
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.container .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: hsla(45, 45%, 14%, 0.815);
+  width: 450px;
+  height: 100px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.container .controls #play {
+  border-radius: 50%;
+  background-color: hsl(38, 61%, 44%);
+  padding: 15px 15px 15px 17px;
+  font-size: 28px;
+  transition: all 0.3s ease;
+}
+
+.container .controls #play:hover {
+  background: hsla(46, 71%, 50%, 0.871);
+}
+
+.container .controls i {
+  padding: 30px 8px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container .controls i:hover {
+color: hsla(64, 93%, 77%, 0.838);
+}
+
+.container .controls i:active{
+    color: hsla(85, 69%, 24%, 0.708);
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
